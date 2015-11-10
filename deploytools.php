@@ -23,7 +23,7 @@ class plgSystemDeployTools extends JPlugin
 	public function onBeforeCompileHead() {
 		
 		$version_filename = $this->params->get('version_filename');
-		$version_file = JPATH_SITE.DIRECTORY_SEPARATOR.$version_filename;
+		$version_file = JPATH_SITE.'/'.$version_filename;
 		$excluded_files = $this->params->get('remove_external_files');
 		$excluded_files = explode("\n", $excluded_files);
 		
@@ -36,6 +36,7 @@ class plgSystemDeployTools extends JPlugin
 			return false;
 		}
 		
+		define("DEPLOYTOOLS_VERSION", $version);
 		$document =& JFactory::getDocument();
 		$headerstuff = $document->getHeadData(); 
 		$head = array();
