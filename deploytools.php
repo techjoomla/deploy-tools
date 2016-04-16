@@ -37,7 +37,7 @@ class plgSystemDeployTools extends JPlugin
 		}
 		
 		define("DEPLOYTOOLS_VERSION", $version);
-		$document =& JFactory::getDocument();
+		$document = JFactory::getDocument();
 		$headerstuff = $document->getHeadData(); 
 		$head = array();
 		
