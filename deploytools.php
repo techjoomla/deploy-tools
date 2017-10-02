@@ -68,8 +68,16 @@ class plgSystemDeployTools extends JPlugin
 			}  
 			$head['scripts'] = $newarray;
 		}
+		if ($this->params->get('process_custom', 1)) {
+			$newarray = array();
+			foreach ($headerstuff['custom'] as $key => $value) {
+				$append = ".min.js?".$version;
+				$newarray[$key] = str_replace(".min.js",$append,$value);
+			} 
+			$head['custom'] = $newarray; 
+		}
+		
 		$document->setHeadData($head); 
-
    }
    
 }
