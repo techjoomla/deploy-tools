@@ -17,7 +17,7 @@ defined('_JEXEC') or die();
  */
 class PlgSystemDeployTools extends JPlugin
 {
-	protected var $_cache = null;
+	protected $_cache = null;
 
 	/**
 	 * Function on beforeCompileHead
@@ -97,7 +97,7 @@ class PlgSystemDeployTools extends JPlugin
 				// Replce string '.js' with '.js.DEPLOYTOOL_VERSION'
 				$outputAfterjsChange = str_replace(".js", ".js?" . $version, $value);
 
-				// Replce string '.css' with '.css.DEPLOYTOOL_VERSION'
+				//Used Output after js replacement taken as input to Replce string '.css' with '.css.DEPLOYTOOL_VERSION'
 				$newarray[$key] = str_replace(".css", ".css?" . $version, $outputAfterjsChange);
 			}
 
