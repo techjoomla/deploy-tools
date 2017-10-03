@@ -42,8 +42,8 @@
 		</field>
 		<field	name="process_custom" type="radio"
 			default="1"
-			description="If set to yes, will append the version number to all javascript files loaded on the site with custom tag in header"
-			label="Process JS Files in custom tags"
+			description="If set to yes, will append the version number to all javascript and CSS files loaded on the site with custom tag in header"
+			label="Process JS and CSS Files in custom tags"
 		>
 			<option
 				value="0">JNo</option>

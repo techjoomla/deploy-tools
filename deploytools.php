@@ -71,8 +71,10 @@ class plgSystemDeployTools extends JPlugin
 		if ($this->params->get('process_custom', 1)) {
 			$newarray = array();
 			foreach ($headerstuff['custom'] as $key => $value) {
-				$append = ".min.js?".$version;
-				$newarray[$key] = str_replace(".min.js",$append,$value);
+				$appendjs = ".js?".$version;
+				$appendcss = ".css?".$version;
+				$outputjs = str_replace(".js",$appendjs,$value);
+				$newarray[$str] = str_replace(".css",$appendcss,$outputjs);
 			} 
 			$head['custom'] = $newarray; 
 		}
