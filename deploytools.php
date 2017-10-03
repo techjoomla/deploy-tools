@@ -74,7 +74,7 @@ class plgSystemDeployTools extends JPlugin
 				$appendjs = ".js?".$version;
 				$appendcss = ".css?".$version;
 				$outputjs = str_replace(".js",$appendjs,$value);
-				$newarray[$str] = str_replace(".css",$appendcss,$outputjs);
+				$newarray[$key] = str_replace(".css",$appendcss,$outputjs);
 			} 
 			$head['custom'] = $newarray; 
 		}
